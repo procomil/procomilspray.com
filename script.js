@@ -22,8 +22,8 @@ document.getElementById("orderForm").addEventListener("submit",e=>{
   const phone=document.getElementById("phone").value.trim();
   const q=parseInt(qty.value);
   const total=PRICE*q;
-  const text=নতুন অর্ডার%0A%0Aপণ্য: Procomil Longtime Power Spray%0Aপরিমাণ: ${q}%0Aমোট: ${money(total)}%0A%0Aনাম: ${encodeURIComponent(name)}%0Aঠিকানা: ${encodeURIComponent(address)}%0Aফোন: ${encodeURIComponent(phone)}%0A%0Aপেমেন্ট: Cash on Delivery;
-  window.open(https://wa.me/${waNumber}?text=${text},"_blank");
+  const text=`নতুন অর্ডার%0A%0Aপণ্য: Procomil Longtime Power Spray%0Aপরিমাণ: ${q}%0Aমোট: ${money(total)}%0A%0Aনাম: ${encodeURIComponent(name)}%0Aঠিকানা: ${encodeURIComponent(address)}%0Aফোন: ${encodeURIComponent(phone)}%0A%0Aপেমেন্ট: Cash on Delivery`;
+  window.open(`https://wa.me/${waNumber}?text=${text}`,"_blank");
 });
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
