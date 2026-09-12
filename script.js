@@ -1,5 +1,5 @@
 const PRICE=1250;
-const waNumber="8801931613491";
+const waNumber="8801615249322";
 const money=n=>new Intl.NumberFormat("bn-BD",{minimumFractionDigits:2,maximumFractionDigits:2}).format(n)+"৳";
 const qty=document.getElementById("qty"), minus=document.getElementById("minus"), plus=document.getElementById("plus");
 function update(){
